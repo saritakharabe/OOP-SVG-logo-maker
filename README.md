@@ -31,13 +31,22 @@ WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ```
 
-
 ## Generated logo Screenshot
 
 ![Image showing a green circle with white text that reads "SVG.".](./images/square.png)
 ![Image showing circle "SVG.".](./images/circle.png)
 ![Image showing triangle "SVG.".](./images/triangle.png)
 
+
+## Demonstration Video
+![Logo generate demo](./images/logo-generate.gif)
+![Testing demo](./images/test-video.gif)
+
+## Tests
+Circle, Square, and Triangle is tested for a render() method that returns a string for the corresponfing SVG file matching Shape, shapeColor, text and textColor requests. Type "npm run test" in the command line and Jest will run all tests.
+
+## Contributing
+This project was created as a challenge assignment for the Full Stack Boot Camp. Please Contact me with any ideas or requests  or any suggestions.
 
 ## Helpful SVG Resources
 
