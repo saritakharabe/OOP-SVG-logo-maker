@@ -1,14 +1,13 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const setShape = require("./lib/selectShape.js");
-const colorKeywords = require("./lib/colorList.js");
+const selectShape = require("./lib/selectShape.js");
 
 const questions = [
   {
     type: "list",
-    name: "shapes",
+    name: "shape",
     message: "What is your shape of your logo",
-    choices: ["Triangle", "Cricle", "Square"],
+    choices: ["Triangle", "Circle", "Square"],
   },
   {
     type: "list",
@@ -19,9 +18,9 @@ const questions = [
   {
     type: "input",
     name: "shapeColor",
-    message: "Enter your selected shape color code choice ",
+    message: "Enter your selected shape color",
   },
-  
+
   {
     name: "text",
     message: "What is the text? (maximum three character)",
@@ -44,30 +43,21 @@ const questions = [
   {
     type: "input",
     name: "choiceTextColor",
-    message: "Enter your choice color keyword",
+    message: "Enter your text color",
   },
 ];
-
-function createLogo(response) {
-  const svg = new setShape(response);
-  fs.writeFile(
-    "./examples/logo.svg",
-    JSON.stringify(svg, null, "\t"),
-    (error) => {
-      error ? console.error(error) : console.log("SVG logo is created");
-    }
-  );
-}
 
 function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      createLogo(response);
+      const svg =  selectShape(response);
+      console.log(svg);
+      fs.writeFile('./examples/logo.svg', svg, (error) =>{
+          error ? console.error(error) : console.log('SVG logo is created');
+      } )
     })
-    .catch((error) => {
-      console.log(error);
-    });
+  
 }
 
 init();
