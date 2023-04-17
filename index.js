@@ -57,7 +57,6 @@ function init() {
           error ? console.error(error) : console.log('SVG logo is created');
       } )
     })
-  
 }
 
 init();
