@@ -36,13 +36,13 @@ const questions = [
   },
   {
     type: "list",
-    name: "textColor",
+    name: "choiceTextColor",
     message: "Enter your text color choice",
     choices: ["color keyword", "hexadecimal"],
   },
   {
     type: "input",
-    name: "choiceTextColor",
+    name: "textColor",
     message: "Enter your text color",
   },
 ];

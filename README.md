@@ -7,6 +7,8 @@ Your task is to build a Node.js command-line application that takes in user inpu
 ## Generated logo Screenshot
 
 ![Image showing a green circle with white text that reads "SVG.".](./images/svg-logo.png)
+![Image showing circle "SVG.".](./images/circle.png)
+![Image showing triangle "SVG.".](./images/triangle.png)
 
 
 ## Helpful SVG Resources
